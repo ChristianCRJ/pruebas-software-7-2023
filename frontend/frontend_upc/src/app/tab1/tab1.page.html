@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Usuarios
+    </ion-title>
+  </ion-toolbar>
+  <style>
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+  </style>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Usuarios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-item>
+  <ion-input type="text" placeholder="Ingrese el Nombre Completo" [(ngModel)]="nombreCompleto"></ion-input>
+  <ion-input type="text" placeholder="Ingrese su User Name" [(ngModel)]="userName"></ion-input>
+  <ion-input type="text" placeholder="Ingrese la Contraseña" [(ngModel)]="password"></ion-input>
+  <ion-button (click)="addUsuario()">Agregar Usuario</ion-button>
+</ion-item>
+<br>
+<!-- <ion-list>
+  <ion-item *ngFor="let item of listaUsuarios">
+    <b>nombre</b>:{{item.nombreCompleto}}; <b>userName</b>:{{item.userName}}; <b>pass</b>:{{item.password}}
+  </ion-item>
+</ion-list> -->
+
+<table>
+  <thead>
+    <tr>
+      <th>nombre Completo</th>
+      <th>user Name</th>
+      <th>password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listaUsuarios">
+      <td>{{ item.nombreCompleto }}</td>
+      <td>{{ item.userName }}</td>
+      <td>{{ item.password }}</td>
+    </tr>
+  </tbody>
+</table>
+</ion-content>
