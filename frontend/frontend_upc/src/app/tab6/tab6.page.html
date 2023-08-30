@@ -1,0 +1,93 @@
+<ion-header  [translucent]="true" >
+  <ion-toolbar class="custom-header">
+    <ion-title>
+      <span class="bold-text">REGISTRO DE NUEVA MASCOTA</span>
+    </ion-title>
+  </ion-toolbar>
+  <style>
+  .custom-header {
+  --background: #a8390d; /* Cambia el color según tus preferencias */
+  color: rgb(255, 255, 255); /* Color de texto para que sea legible en el fondo */
+}
+    .bold-text {
+  font-weight: bold;
+}
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+  </style>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">AGREGAR COMPRA</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+
+<!-- <ion-content>
+  <ion-item>
+    <ion-input type="text" placeholder="Ingrese la fecha" [(ngModel)]="fecha"></ion-input>
+    <ion-input type="text" placeholder="ingresar el idUsuario" [(ngModel)]="idUsuario"></ion-input>
+    <ion-button (click)="addcarrito()">Agregar Producto</ion-button>
+  </ion-item>
+  <br>
+  
+  <table>
+    <thead>
+      <tr>
+        
+        <th>fecha</th>
+        <th>idUsuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listacarrito">
+        <td>{{ item.fecha }}</td>
+        <td>{{ item.idUsuario }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>
+ -->
+ <ion-card>
+  <ion-card-header>
+    Datos de la Mascota
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="floating">Nombre de la Mascota</ion-label>
+      <ion-input [(ngModel)]="nombre" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Especie</ion-label>
+      <ion-input [(ngModel)]="especie"></ion-input>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input type="number" [(ngModel)]="edad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Dueño (ID del Cliente)</ion-label>
+      <ion-input type="number" [(ngModel)]="cliente_Id"></ion-input>
+    </ion-item> -->
+  </ion-card-content>
+</ion-card>
+
+<ion-button expand="full" (click)="addMascotas()">Registrar Mascota</ion-button>
+
+</ion-content>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Carritos } from '../entidades/carrito-compra';
-import { Usuarios } from '../entidades/usuarios';
 import { HttpResponse } from '@angular/common/http';
 import { CarritosService } from '../servicios-backend/carrito-compra/carrito-compra.service';
 
@@ -16,29 +15,11 @@ export class Tab4Page {
 
   public listacarrito: Carritos[] = []
 
-  public listaUsuarios: Usuarios[] = []
 
   constructor(private CarritosService: CarritosService) {
     this.getcarritoFromBackend();
-
-    //this.getUsuariosFromBackend();
   }
 
-
-  // private getUsuariosFromBackend(){
-  //   this.ProductosService.GetUsuarios().subscribe({
-  //       next: (response: HttpResponse<any>) => {
-  //           this.listaUsuarios = response.body;
-  //           console.log(this.listaUsuarios)
-  //       },
-  //       error: (error: any) => {
-  //           console.log(error);
-  //       },
-  //       complete: () => {
-  //           //console.log('complete - this.getUsuarios()');
-  //       },
-  //   });
-  // }
 
   private getcarritoFromBackend(){
     this.CarritosService.GetCarritocompra().subscribe({

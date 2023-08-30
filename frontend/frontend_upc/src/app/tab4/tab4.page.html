@@ -48,86 +48,30 @@ th {
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content>
-
+<ion-content>
   <ion-item>
-    <ion-label position="stacked">Nombre</ion-label>
-    <ion-input type="text" placeholder="Ingrese el Nombre" [(ngModel)]="nombre"></ion-input>
+    <ion-input type="text" placeholder="Ingrese la fecha" [(ngModel)]="fecha"></ion-input>
+    <ion-input type="text" placeholder="ingresar el idUsuario" [(ngModel)]="idUsuario"></ion-input>
+    <ion-button (click)="addcarrito()">Agregar Producto</ion-button>
   </ion-item>
-
-  <ion-item>
-    <ion-label position="stacked">ID de Categoría</ion-label>
-    <ion-input type="text" placeholder="Ingrese el Id de Categoría" [(ngModel)]="idCategoria"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-button expand="full" (click)="addproducto()">Agregar Compra</ion-button>
-  </ion-item>
-
+  <br>
+  
   <table>
     <thead>
       <tr>
         
-        <th>Nombre</th>
-        <th>idCategoria</th>
+        <th>fecha</th>
+        <th>idUsuario</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of listaproducto">
-        <td>{{ item.nombre }}</td>
-        <td>{{ item.idCategoria }}</td>
+      <tr *ngFor="let item of listacarrito">
+        <td>{{ item.fecha }}</td>
+        <td>{{ item.idUsuario }}</td>
       </tr>
     </tbody>
   </table>
-</ion-content> -->
-
-<ion-content>
-  <ion-item>
-    <ion-label position="stacked">FECHA</ion-label>
-    <ion-input type="text" placeholder="Ingrese la Fecha" [(ngModel)]="fecha"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="stacked">USUARIO</ion-label>
-    <ion-input type="text" placeholder="Ingrese el Usuario" [(ngModel)]="idUsuario"></ion-input>
-  </ion-item>
-  <!-- <ion-item>
-    <ion-select placeholder="Seleccione un usuario" [(ngModel)]="selectedUserId">
-      <ion-select-option *ngFor="let user of usuarios" [value]="user.id">{{ user.nombre }}</ion-select-option>
-    </ion-select>
-  </ion-item> -->
-
-  <ion-item-divider>
-    <ion-label>Detalle de Compras</ion-label>
-  </ion-item-divider>
-
-  <ion-list>
-    <ion-item >
-      <ion-label>LAPIZ</ion-label>
-      <ion-label slot="end">1</ion-label>
-      <ion-button slot="end" (click)="addcarrito()">Eliminar</ion-button>
-    </ion-item>
-  </ion-list>
-
-  <ion-item>
-    <ion-button expand="full" (click)="addcarrito()">Realizar Compra</ion-button>
-  </ion-item>
 </ion-content>
 
-<table>
-  <thead>
-    <tr>
-      
-      <th>FECHA</th>
-      <th>USUARIO</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of listacarrito">
-      <td>{{ item.fecha }}</td>
-      <td>{{ item.idUsuario }}</td>
-    </tr>
-  </tbody>
-</table>
 
 </ion-content>

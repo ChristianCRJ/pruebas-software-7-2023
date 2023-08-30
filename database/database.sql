@@ -23,7 +23,34 @@ DROP TABLE CARRITO_COMPRA;
 
 
 */
+--///////////////////////CLIENTES//////////////////////////////////////////
+IF OBJECT_ID('CLIENTES', 'U') IS NOT NULL 
+  DROP TABLE CLIENTES; 
+GO
+CREATE TABLE CLIENTES (
+    "ID"                  INT IDENTITY(1,1),
+    "NOMBRE_COMPLETO"     VARCHAR(150) NOT NULL,
+    "TELEFONO"            VARCHAR(15) NOT NULL,
+    "DIRECCION"           VARCHAR(200) NOT NULL
+    CONSTRAINT CLIENTES_PK		PRIMARY KEY (ID)
+);
 
+IF OBJECT_ID('MASCOTAS', 'U') IS NOT NULL 
+  DROP TABLE MASCOTAS; 
+GO
+CREATE TABLE MASCOTAS (
+    "ID"                  INT IDENTITY(1,1),
+    "NOMBRE"              VARCHAR(150) NOT NULL,
+    "ESPECIE"             VARCHAR(50),
+    "EDAD"                INT,
+    "CLIENTE_ID"            INT,
+    CONSTRAINT MASCOTAS_PK		PRIMARY KEY (ID)
+);
+
+ALTER TABLE MASCOTAS
+  ADD CONSTRAINT "FK_MASCOTAS_TO_CLIENTES" 
+  FOREIGN KEY(CLIENTE_ID)
+  REFERENCES CLIENTES("ID");
 
 --/////////////////////////USUARIOS///////////////////////////////////////////
 

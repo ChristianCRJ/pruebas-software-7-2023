@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROCA\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj": {}
+    "C:\\Users\\ROCA\\Desktop\\pruebas-software-7-2023\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROCA\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj": {
+    "C:\\Users\\ROCA\\Desktop\\pruebas-software-7-2023\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROCA\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\ROCA\\Desktop\\pruebas-software-7-2023\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\ROCA\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
+        "projectPath": "C:\\Users\\ROCA\\Desktop\\pruebas-software-7-2023\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\ROCA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROCA\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\obj\\",
+        "outputPath": "C:\\Users\\ROCA\\Desktop\\pruebas-software-7-2023\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ROCA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,7 +42,7 @@
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.0.143, )"
+              "version": "[2.0.151, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
